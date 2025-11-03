@@ -1,8 +1,6 @@
 import { Module } from '@nestjs/common';
 import { DatabaseModule } from './database/database.module';
-import { AuthModule } from './auth/auth.module';
-import { UsersModule } from './users/users.module';
-import { TransactionsModule } from './transactions/transactions.module';
+import { AuthModule, UsersModule, TransactionsModule } from './modules';
 import { WinstonModule } from 'nest-winston';
 import * as winston from 'winston';
 

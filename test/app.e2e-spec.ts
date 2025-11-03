@@ -3,8 +3,7 @@ import { INestApplication, ValidationPipe } from '@nestjs/common';
 import * as request from 'supertest';
 import { AppModule } from '../src/app.module';
 import { DataSource } from 'typeorm';
-import { User } from '../src/users/user.entity';
-import { Transaction } from '../src/transactions/transaction.entity';
+import { User, Transaction } from '../src/modules';
 
 describe('Financial Wallet App (e2e)', () => {
   let app: INestApplication;

@@ -1,12 +1,12 @@
+import { BadRequestException, NotFoundException } from '@nestjs/common';
 import { Test, TestingModule } from '@nestjs/testing';
 import { getRepositoryToken } from '@nestjs/typeorm';
-import { Repository, DataSource } from 'typeorm';
-import { BadRequestException, NotFoundException } from '@nestjs/common';
-import { TransactionsService } from './transactions.service';
-import { Transaction, TransactionStatus } from './transaction.entity';
+import { DataSource, Repository } from 'typeorm';
 import { UsersService } from '../users/users.service';
 import { CreateTransactionDto } from './dto/create-transaction.dto';
 import { ReverseTransactionDto } from './dto/reverse-transaction.dto';
+import { Transaction, TransactionStatus } from './transaction.entity';
+import { TransactionsService } from './transactions.service';
 
 describe('TransactionsService', () => {
   let service: TransactionsService;
